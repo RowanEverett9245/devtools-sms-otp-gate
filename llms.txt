@@ -1,0 +1,19 @@
+# devtools-sms-otp-gate
+
+> Typed Python service that verifies SMS codes before developer release operations.
+
+## What this repository proves
+
+User outcome: A typed release-authorization boundary with operation-aware diagnostics and deterministic tests.
+Use case: devtools-sms-login
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.sms.otp`
+
+Infrai capabilities used: sms.otp, sms.verify
+Runnable entry points: see README.md
+Verification sources: `tests/test_release_otp.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt

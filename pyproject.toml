@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "devtools-sms-otp-gate"
+version = "0.1.0"
+description = "Typed Python service that verifies SMS codes before developer release operations."
+requires-python = ">=3.11"
+dependencies = ["fastapi>=0.115,<1", "pydantic>=2.8,<3", "uvicorn>=0.30,<1"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.2,<9"]
+
+[tool.setuptools]
+py-modules = ["devtools_login", "release_otp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
